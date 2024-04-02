@@ -1,11 +1,12 @@
-import { DIMENSIONS, DRAW } from '../utils/constants';
+import { DRAW, EMPTY_GRID } from '../utils/constants';
 
-type Grid = Array<null | number>;
+export type Grid = Array<null | number>;
+
 export default class Board {
   grid: Grid;
   winningIndex: null | number;
   constructor(grid?: Grid) {
-    this.grid = grid || new Array(DIMENSIONS ** 2).fill(null);
+    this.grid = grid || EMPTY_GRID;
     this.winningIndex = null;
   }
 
@@ -15,7 +16,6 @@ export default class Board {
     }
   };
 
-  // Collect indices of empty squares and return them
   getEmptySquares = (grid = this.grid) => {
     let squares: number[] = [];
     grid.forEach((square, i) => {
@@ -25,7 +25,7 @@ export default class Board {
   };
 
   isEmpty = (grid = this.grid) => {
-    return this.getEmptySquares(grid).length === DIMENSIONS ** 2;
+    return this.getEmptySquares(grid).length === 9;
   };
 
   getWinner = (grid = this.grid) => {

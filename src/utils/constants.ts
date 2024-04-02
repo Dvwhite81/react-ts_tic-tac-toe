@@ -1,6 +1,4 @@
-export const DIMENSIONS = 3;
-export const SQUARE_DIMENSIONS = 100;
-
+export const EMPTY_GRID = new Array(9).fill(null);
 export const DRAW = 0;
 export const PLAYER_X = 1;
 export const PLAYER_O = 2;

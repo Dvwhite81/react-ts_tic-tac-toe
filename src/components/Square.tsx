@@ -1,4 +1,4 @@
-import { PLAYER_X, SQUARE_DIMENSIONS } from '../utils/constants';
+import { PLAYER_X } from '../utils/constants';
 
 interface Props {
   isActive: boolean;
@@ -9,15 +9,7 @@ interface Props {
 
 const Square = ({ isActive, index, value, playerMove }: Props) => {
   return (
-    <button
-      className="square"
-      type="button"
-      onClick={() => playerMove(index)}
-      style={{
-        height: `${SQUARE_DIMENSIONS}px`,
-        width: `${SQUARE_DIMENSIONS}px`,
-      }}
-    >
+    <button className="square" type="button" onClick={() => playerMove(index)}>
       {isActive && <p className="marker">{value === PLAYER_X ? 'X' : 'O'}</p>}
     </button>
   );

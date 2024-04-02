@@ -1,12 +1,10 @@
-import { SQUARE_DIMENSIONS } from '../utils/constants';
-import Board from './Board';
+import Board, { Grid } from './Board';
 import ResultModal from './ResultModal';
 import Square from './Square';
 import StrikeThru from './StrikeThru';
 
 interface Props {
-  dimensions: number;
-  grid: Array<number | null>;
+  grid: Grid;
   playerMove: (index: number) => void;
   isOpen: boolean;
   close: () => void;
@@ -17,7 +15,6 @@ interface Props {
 }
 
 const Game = ({
-  dimensions,
   grid,
   playerMove,
   isOpen,
@@ -28,10 +25,7 @@ const Game = ({
   gameState,
 }: Props) => {
   return (
-    <div
-      className="container"
-      style={{ width: `${dimensions * SQUARE_DIMENSIONS + 12}px` }}
-    >
+    <div className="container">
       {grid.map((value, index) => {
         const isActive = value !== null;
 

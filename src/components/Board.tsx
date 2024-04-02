@@ -59,7 +59,7 @@ export default class Board {
   /**
    * Get the styles for strike through based on the combination that won
    */
-  getStrikethroughStyles = () => {
+  getStrikeThruStyles = () => {
     const defaultWidth = 285;
     const diagonalWidth = 400;
     switch (this.winningIndex) {

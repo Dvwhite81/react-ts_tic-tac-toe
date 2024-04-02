@@ -12,7 +12,11 @@ const Intro = ({ difficulty, changeDifficulty, choosePlayer }: Props) => {
     <div>
       <div className="inner">
         <p>Select Difficulty</p>
-        <select onChange={changeDifficulty} value={difficulty}>
+        <select
+          className="select-difficulty"
+          onChange={changeDifficulty}
+          value={difficulty}
+        >
           {Object.keys(GAME_MODES).map((key) => {
             const gameMode = GAME_MODES[key];
             return (
@@ -27,10 +31,18 @@ const Intro = ({ difficulty, changeDifficulty, choosePlayer }: Props) => {
       <div className="inner">
         <p>Choose Your Player</p>
         <div className="button-row">
-          <button type="button" onClick={() => choosePlayer(PLAYER_X)}>
+          <button
+            className="player-button"
+            type="button"
+            onClick={() => choosePlayer(PLAYER_X)}
+          >
             X
           </button>
-          <button type="button" onClick={() => choosePlayer(PLAYER_O)}>
+          <button
+            className="player-button"
+            type="button"
+            onClick={() => choosePlayer(PLAYER_O)}
+          >
             O
           </button>
         </div>

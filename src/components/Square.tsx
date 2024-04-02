@@ -9,8 +9,9 @@ interface Props {
 
 const Square = ({ isActive, index, value, playerMove }: Props) => {
   return (
-    <div
+    <button
       className="square"
+      type="button"
       onClick={() => playerMove(index)}
       style={{
         height: `${SQUARE_DIMENSIONS}px`,
@@ -18,7 +19,7 @@ const Square = ({ isActive, index, value, playerMove }: Props) => {
       }}
     >
       {isActive && <p className="marker">{value === PLAYER_X ? 'X' : 'O'}</p>}
-    </div>
+    </button>
   );
 };
 

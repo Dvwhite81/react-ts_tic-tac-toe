@@ -30,7 +30,7 @@ const Game = ({
   return (
     <div
       className="container"
-      style={{ width: `${dimensions * SQUARE_DIMENSIONS + 5}px` }}
+      style={{ width: `${dimensions * SQUARE_DIMENSIONS + 12}px` }}
     >
       {grid.map((value, index) => {
         const isActive = value !== null;

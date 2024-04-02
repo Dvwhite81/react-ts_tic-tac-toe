@@ -1,10 +1,11 @@
 #root {
   align-items: center;
+  background-color: slategrey;
+  color: whitesmoke;
   display: flex;
   height: 100%;
   justify-content: center;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -20,10 +21,16 @@
 .square {
   align-items: center;
   border: 2px solid #41403e;
-  border-radius: 255px 15px 225px 15px / 15px 255px 15px;
+  border-radius: 10px;
   cursor: pointer;
   display: flex;
   justify-content: center;
+  margin: 2px;
+}
+
+.square:hover,
+.square:focus {
+  border-color: slategray;
 }
 
 .marker {
@@ -35,6 +42,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  font-size: 40px;
   margin-bottom: 30px;
 }
 
@@ -42,6 +50,36 @@
   display: flex;
   justify-content: space-between;
   width: 150px;
+}
+
+.select-difficulty {
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  color: whitesmoke;
+}
+
+.select-difficulty:hover,
+.select-difficulty:focus {
+  background-color: whitesmoke;
+  border-color: slategray;
+  color: slategray;
+  cursor: pointer;
+}
+
+.inner p {
+  margin-bottom: 10px;
+}
+
+.player-button {
+  align-items: center;
+  border-radius: 10px;
+  color: slategray;
+  display: flex;
+  font-size: 32px;
+  font-weight: bold;
+  height: 3rem;
+  justify-content: center;
+  width: 3rem;
 }
 
 /* STRIKETHRU */

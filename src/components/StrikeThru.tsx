@@ -1,12 +1,13 @@
 import { GAME_STATES } from '../utils/constants';
+import Board from './Board';
 
 interface BaseStyleType {
   [key: string]: string;
 }
 
 interface Props {
-  board: any;
-  gameState: any;
+  board: Board;
+  gameState: string;
 }
 
 const StrikeThru = ({ board, gameState }: Props) => {
@@ -16,8 +17,8 @@ const StrikeThru = ({ board, gameState }: Props) => {
   const baseStyles: BaseStyleType = {};
 
   if (styles !== null) {
-    for (const key of styles) {
-      baseStyles[key] = styles[key];
+    for (const [key, value] of Object.entries(styles)) {
+      baseStyles[key] = value;
     }
   }
 

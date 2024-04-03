@@ -25,7 +25,7 @@ const TicTacToe = ({ squares = emptyGrid }: Props) => {
   const [winner, setWinner] = useState<string | null>(null);
   const [nextMove, setNextMove] = useState<null | number>(null);
   const [modalOpen, setModalOpen] = useState(false);
-  const [difficulty, setDifficulty] = useState(GAME_MODES.hard);
+  const [difficulty, setDifficulty] = useState(GAME_MODES.medium);
   const [players, setPlayers] = useState<Record<string, number | null>>({
     human: null,
     ai: null,
